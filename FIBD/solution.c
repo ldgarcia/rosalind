@@ -16,6 +16,7 @@ int main(int argc, char** argv) {
 	for(i = 3; i <= n; ++i) {
 		pairs[i] = pairs[i-1] + pairs[i-2];
 		if(i > m) {
+			// These rabbits are guaranteed to be dead.
 			pairs[i] -= pairs[i-m-1];
 		}
 	}
